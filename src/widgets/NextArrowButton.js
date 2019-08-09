@@ -1,13 +1,13 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
   View,
   Text,
   StyleSheet,
   TextInput,
-  TouchableHighlight
-} from 'react-native';
-import colors from "../style/color";
-import Icon from 'react-native-vector-icons/FontAwesome';
+  TouchableHighlight,
+} from "react-native";
+import colors from '../style/color';
+import Icon from "react-native-vector-icons/FontAwesome";
 export default class NextArrowButton extends Component {
   render() {
     return (
@@ -27,21 +27,21 @@ export default class NextArrowButton extends Component {
 
 const styles = StyleSheet.create({
   buttonWrapper: {
-    alignItems: "flex-end",
+    alignItems: 'flex-end',
     right: 20,
     bottom: 20,
-    paddingTop: 0
+    paddingTop: 0,
   },
   button: {
-    alignItems: "center",
-    justifyContent: "center",
+    alignItems: 'center',
+    justifyContent: 'center',
     borderRadius: 50,
     width: 60,
     height: 60,
-    backgroundColor: colors.white
+    backgroundColor: colors.white,
   },
   icon: {
     marginRight: -2,
-    marginTop: -2
-  }
+    marginTop: -2,
+  },
 });

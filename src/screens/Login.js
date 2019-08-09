@@ -38,8 +38,8 @@ export default class Login extends Component {
               customStyle={{ marginBottom: 30 }}
             />
           </ScrollView>
-          <NextArrowButton />
         </View>
+        <NextArrowButton />
       </KeyboardAvoidingView>
     );
   }
@@ -52,9 +52,14 @@ const styles = StyleSheet.create({
     backgroundColor: colors.green01,
   },
   scrollView: {
+    paddingLeft: 30,
+    paddingRight: 30,
+    paddingTop: 20,
+    flex: 1
+  },
+  scrollViewWrapper: {
     marginTop: 70,
-    // flex: 1,
-    padding: 20,
+    flex: 1
   },
   avoidView: {
     paddingLeft: 30,
