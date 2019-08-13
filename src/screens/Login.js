@@ -11,13 +11,26 @@ import colors from "../style/color";
 
 import InputField from '../widgets/InputField';
 import NextArrowButton from '../widgets/NextArrowButton';
-
+import common from "../style/common.style.js";
 export default class Login extends Component {
+  constructor(props) {
+    super(props);
+  }
+  onPress = () => {
+    this.props.navigation.push("home");
+  };
+
   render() {
     return (
-      <KeyboardAvoidingView style={styles.wrapper} behavior="padding">
+      <KeyboardAvoidingView style={common.wrapper} behavior="padding">
         <View style={styles.scrollViewWrapper}>
           <ScrollView style={styles.scrollView}>
+            <View style={styles.logoWrapper}>
+              <Image
+                style={styles.logo}
+                source={require('../img/logo-big-2.png')}
+              />
+            </View>
             <Text style={styles.loginHeader}>Login</Text>
             <InputField
               labelText="EMAIL ADDRESS"
@@ -39,27 +52,26 @@ export default class Login extends Component {
             />
           </ScrollView>
         </View>
-        <NextArrowButton />
+        <NextArrowButton onPress={this.onPress} />
       </KeyboardAvoidingView>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  wrapper: {
-    display: 'flex',
-    flex: 1,
-    backgroundColor: colors.green01,
+  logoWrapper: {
+    alignItems: 'center',
   },
-  scrollView: {
-    paddingLeft: 30,
-    paddingRight: 30,
-    paddingTop: 20,
-    flex: 1
+  logo: {
+    width: 150,
+    height: 50,
+    marginTop: 50,
+    marginBottom: 40,
   },
   scrollViewWrapper: {
     marginTop: 70,
-    flex: 1
+    flex: 1,
+    padding: 20,
   },
   avoidView: {
     paddingLeft: 30,

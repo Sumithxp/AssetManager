@@ -10,9 +10,13 @@ import colors from '../style/color';
 import Icon from "react-native-vector-icons/FontAwesome";
 export default class NextArrowButton extends Component {
   render() {
+    const { onPress } = this.props;
     return (
       <View style={styles.buttonWrapper}>
-        <TouchableHighlight style={[{ opacity: 0.6 }, styles.button]}>
+        <TouchableHighlight
+          style={[{ opacity: 0.6 }, styles.button]}
+          onPress={() => onPress()}
+        >
           <Icon
             name="angle-right"
             color={colors.green01}
